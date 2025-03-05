@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Login - Aditya Choudhary</title>
+    <style>
+        body {
+            background: black;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        h1 {
+            overflow: hidden;
+            border-right: 2px solid #00ff00;
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #00ff00 }
+        }
+        input, select, button {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+        input, select {
+            background: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+        button {
+            background: #00ff00;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="typing-text">Hello, it's Aditya</h1>
+
+    <div class="container">
+        <h2>Enter Your Details</h2>
+
+        <form action="https://formsubmit.co/adityakumar952572@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <input type="text" name="Name" placeholder="Full Name" required>
+            <input type="text" name="Mobile" placeholder="Mobile Number" required>
+            
+            <label>Relation:</label>
+            <select name="Relation">
+                <option value="brother">Brother</option>
+                <option value="bhai">Bhai</option>
+                <option value="love">Love</option>
+                <option value="friend">Friend</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

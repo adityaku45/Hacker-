@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Choudhary</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 3px solid white;
+        }
+        input, select, button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input, select {
+            background: white;
+            color: black;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff3300;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, it's Aditya</h1>
+    
+    <!-- Replace IMAGE_LINK with your hosted image URL -->
+    <img src="https://raw.githubusercontent.com/adityaku45/Gift.Special.foryou/main/InShot_20240616_151245258.jpg" alt="Aditya Choudhary">
+
+    <div class="container">
+        <h2>Enter Your Details</h2>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" id="mobile" placeholder="Mobile Number" required>
+        
+        <label>Relation:</label>
+        <select id="relation">
+            <option value="brother">Brother</option>
+            <option value="bhai">Bhai</option>
+            <option value="love">Love</option>
+            <option value="friend">Friend</option>
+        </select>
+        
+        <button onclick="checkDetails()">Submit</button>
+    </div>
+
+    <p id="message"></p>
+
+    <script>
+        function checkDetails() {
+            let name = document.getElementById("name").value.trim().toLowerCase();
+            let mobile = document.getElementById("mobile").value.trim();
+            let relation = document.getElementById("relation").value.toLowerCase();
+            let message = "";
+            let emailBody = `Name: ${name}\nMobile: ${mobile}\nRelation: ${relation}`;
+
+            if (name === "aditya choudhary" && mobile === "9801719088" && (relation === "friend" || relation === "bhai" || relation === "brother")) {
+                message = "Kaisa hai";
+            } 
+            else if (name === "naitik singh" && (mobile === "7766953200" || mobile === "8757059530")) {
+                message = `Name: Naitik Singh\nFather's Name: Ratnesh Singh\nMother's Name: Nilu Singh\nSchool: SPS Public School\nVillage: Lodhash\nLove: Rahane do..\nKaisa hai bhai`;
+            }
+            else if (name === "sumit singh" && mobile === "8416910809" && (relation === "bhai" || relation === "friend")) {
+                message = (relation === "bhai") ? "Bas aise hi bro, Kuch bhi" : "Arey yaar, sahi sahi information add kare";
+            }
+            else if ((name === "ashish singh" || name === "ashish kumar singh") && mobile === "6204627691" && (relation === "bhai" || relation === "brother")) {
+                message = "Tab kaisa hai, aapka photo add kare ka?";
+            }
+            else {
+                message = "Invalid Details!";
+            }
+
+            document.getElementById("message").innerText = message;
+
+            // Send email notification to adityakumar952572@gmail.com
+            window.open(`mailto:adityakumar952572@gmail.com?subject=Visitor Info&body=${emailBody}`);
+        }
+    </script>
+</body>
+</html>
